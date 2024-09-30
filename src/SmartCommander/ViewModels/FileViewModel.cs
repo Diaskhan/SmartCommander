@@ -1,8 +1,10 @@
-﻿using ReactiveUI;
+﻿using Avalonia.Media.Imaging;
+using ReactiveUI;
 using SmartCommander.Assets;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Windows.Platform;
 
 namespace SmartCommander.ViewModels
 {
@@ -69,6 +71,7 @@ namespace SmartCommander.ViewModels
                     ImageSource = "Assets/file.png";
                 }
             }
+            ImageIcon = NativeMethodsWindows.GetFileIconAsBitmap(fullName,true);
         }
         public string FullName { get; set; } = "";
         public string Name 
@@ -110,5 +113,6 @@ namespace SmartCommander.ViewModels
         public bool IsFolder { get; set; } 
 
         public string? ImageSource { get; set; }
+        public Bitmap? ImageIcon { get; set; }
     }
 }

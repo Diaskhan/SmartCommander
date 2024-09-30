@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCommander", "SmartCommander\SmartCommander.csproj", "{613227E4-6B43-4185-8D02-1F0F3A3A3533}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartCommander", "SmartCommander\SmartCommander.csproj", "{613227E4-6B43-4185-8D02-1F0F3A3A3533}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE9C667E-1916-4E22-9893-702DC2E3C8A3} = {FE9C667E-1916-4E22-9893-702DC2E3C8A3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows.Platform", "Windows.Specific\Windows.Platform.csproj", "{FE9C667E-1916-4E22-9893-702DC2E3C8A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{613227E4-6B43-4185-8D02-1F0F3A3A3533}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{613227E4-6B43-4185-8D02-1F0F3A3A3533}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{613227E4-6B43-4185-8D02-1F0F3A3A3533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9C667E-1916-4E22-9893-702DC2E3C8A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9C667E-1916-4E22-9893-702DC2E3C8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9C667E-1916-4E22-9893-702DC2E3C8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9C667E-1916-4E22-9893-702DC2E3C8A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

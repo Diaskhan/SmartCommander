@@ -74,7 +74,7 @@
 					<DataGridTemplateColumn.CellTemplate>
 						<DataTemplate>
 							<Image VerticalAlignment="Center" HorizontalAlignment="Center" 
-								   Source="{Binding ImageSource, Converter={StaticResource variableImage}}"
+								   Source="{Binding ImageIcon}"
 									Width="16"/>
 						</DataTemplate>
 					</DataGridTemplateColumn.CellTemplate>
