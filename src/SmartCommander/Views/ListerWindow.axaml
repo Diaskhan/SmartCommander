@@ -11,12 +11,37 @@
 		xmlns:behaviors="clr-namespace:SmartCommander.Behaviors;assembly=SmartCommander"
         x:Class="SmartCommander.ListerWindow"
         Title="SmartCommander Viewer">
-	<Grid x:Name="GridPanel">
-		<AvaloniaEdit:TextEditor IsReadOnly="True"
-                           FontFamily="Cascadia Code,Consolas,Menlo,Monospace">
-			<i:Interaction.Behaviors>
-				<behaviors:DocumentTextBindingBehavior Text="{Binding Text, Mode=TwoWay}"/>
-			</i:Interaction.Behaviors>
-		</AvaloniaEdit:TextEditor>
-	</Grid>
+
+	<DockPanel>
+		
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="File" IsTabStop="False">
+				<MenuItem Header="Close"/>
+			</MenuItem>
+			<MenuItem Header="Edit" IsTabStop="False">
+				<MenuItem Header="Copy"/>
+				<MenuItem Header="Select All"/>
+				<Separator/>
+				<MenuItem Header="Find"/>
+				<MenuItem Header="Find next"/>
+			</MenuItem>
+
+			<MenuItem Header="View" IsTabStop="False">
+				<MenuItem Header="Wrap Lines"/>
+				<MenuItem Header="Show Text Cursor"/>
+				<Separator/>
+				<MenuItem Header="Any Ideas?" IsEnabled="False"/>
+			</MenuItem>
+		</Menu>
+
+		<Grid x:Name="GridPanel">
+			<AvaloniaEdit:TextEditor IsReadOnly="True"
+							   FontFamily="Cascadia Code,Consolas,Menlo,Monospace">
+				<i:Interaction.Behaviors>
+					<behaviors:DocumentTextBindingBehavior Text="{Binding Text, Mode=TwoWay}"/>
+				</i:Interaction.Behaviors>
+			</AvaloniaEdit:TextEditor>
+		</Grid>
+	
+	</DockPanel>
 </Window>
