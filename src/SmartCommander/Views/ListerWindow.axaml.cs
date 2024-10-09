@@ -8,10 +8,10 @@ using System;
 
 namespace SmartCommander;
 
-public partial class ViewerWindow : Window
+public partial class ListerWindow : Window
 {
     IntPtr listerWindowHandle { get; set; }
-    public ViewerWindow()
+    public ListerWindow()
     {
         InitializeComponent();
         this.Opened+= OnWindowOpened;
